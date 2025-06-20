@@ -118,12 +118,45 @@ body {
 .custom-diy-grid img {
   max-width: 100%;
   max-height: 180px;
-  height: auto;
-  width: auto;
   border-radius: 6px;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 10px;
 }
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f6e8f8;
+  border-radius: 10px;
+  border: 1px solid #999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Style form elements for visibility */
+.form-wrapper label,
+.form-wrapper input,
+.form-wrapper select,
+.form-wrapper button,
+.form-wrapper textarea {
+  display: block;
+  width: 50%;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+.form-wrapper button {
+  background-color: #800080;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-wrapper button:hover {
+  background-color: #a300a3;
+}
+
 
 /* Text (caption) styling */
 .custom-diy-grid p {
@@ -140,13 +173,7 @@ body {
   padding: 10px;
 }
 
-/* Make images responsive */
-.custom-diy-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  object-fit: cover;
-}
+
 
 /* Text styling inside blocks */
 .custom-diy-grid p {

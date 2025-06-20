@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrangling the Robertson's Reviews</title>
-  <link rel="stylesheet" href="styles.css" >
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<link rel="stylesheet" href="themes/New.min.css" />
-<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<script src="layout.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Your custom theme -->
+  <link rel="stylesheet" href="themes/New.min.css">
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- jQuery FIRST -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- Mobileinit: must come BEFORE jQuery Mobile -->
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
  <header class="top-bar">
@@ -59,13 +74,15 @@
       style="cursor: pointer;"
       onclick="window.open('images/After.jpg', '_blank')">
     </aside>
-    <footer class="site-footer" style="text-align:center; padding:20px; background:#eee;"></footer>
+     <footer class="site-footer" style="text-align:center; padding:20px;">
+  <p>&copy; 2025 Wrangling the Robertson's Reviews | All rights reserved.</p>
+</footer>
   </main>
 
 <button id="openContactBtn" class="ui-btn ui-btn-a ui-btn-inline ui-mini">Contact Us</button>
 
 <div id="contactPanel" class="contactPanel">
-  <button id="closePanelBtn">&times;</button>
+  <button id="closePanelBtn">X</button>
   <h2>Contact Us</h2>
   <form id="contactForm">
   <label for="name">Your Name:</label><br>
@@ -75,7 +92,7 @@
   <input type="email" id="email" name="email" required><br>
 
   <label for="purpose">What would you like to do?</label><br>
-  <select id="purpose" name="purpose" required data-role="none">
+  <select id="purpose" name="purpose" required>
     <option value="">-- Please select --</option>
     <option value="contact">Contact Us</option>
     <option value="recommend">Recommend a Review</option>
@@ -92,5 +109,6 @@
   <button type="submit">Send</button>
 </form>
 </div>
+<script src="layout.js"></script>
 </body>
 </html>

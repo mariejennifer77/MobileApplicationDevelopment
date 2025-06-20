@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrangling the Robertson's Reviews</title>
-  <link rel="stylesheet" href="styles.css" >
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<link rel="stylesheet" href="themes/New.min.css" />
-<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<script src="layout.js"></script>
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Your custom theme -->
+  <link rel="stylesheet" href="themes/New.min.css">
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- jQuery FIRST -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- Mobileinit: must come BEFORE jQuery Mobile -->
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
@@ -49,7 +61,7 @@
       
         <ul>
         <li data-img="images/Alfredo.png">
-  <img src="images/Alfredo.png" class="thumb" alt="alfredo"> Amazaing Alfredo
+  <img src="images/Alfredo.png" class="thumb" alt="alfredo"> Amazing Alfredo
 </li>
    <li data-img="images/Applepie.png">
   <img src="images/Applepie.png" class="thumb" alt="apple pie"> Apple Pie
@@ -106,7 +118,7 @@
   <img src="images/Lasagna.png" class="thumb" alt="lasagna"> Lasagna
 </li>
  <li data-img="images/Loosemeat.png">
-  <img src="images/Loosemeat.png" class="thumb" alt="loose meat sandwhiches"> Loose Meat Sandwiches
+  <img src="images/Loosemeat.png" class="thumb" alt="loose meat sandwiches"> Loose Meat Sandwiches
 </li>
  <li data-img="images/Meatloaf.png">
   <img src="images/Meatloaf.png" class="thumb" alt="meatloaf"> Meatloaf
@@ -161,7 +173,8 @@
   <img id="garlicChickenImg" src="images/Garlicchicken.png" alt="Click for larger view" style="cursor: pointer;">
   <img id="pizzaBurgersImg" src="images/Pizzaburgers.png" alt="Click for larger view" style="cursor: pointer;">
     </aside>
-    <footer class="site-footer" style="text-align:center; padding:20px; background:#eee;"></footer>
+    <footer class="site-footer" style="text-align:center; padding:20px;">
+  <p>&copy; 2025 Wrangling the Robertson's Reviews | All rights reserved.</p></footer>
   </main>
 
 <button id="openContactBtn" class="ui-btn ui-btn-a ui-btn-inline ui-mini">Contact Us</button>
@@ -194,5 +207,6 @@
   <button type="submit">Send</button>
 </form>
 </div>
+<script src="layout.js"></script>
 </body>
 </html>

@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrangling the Robertson's Reviews</title>
-  <link rel="stylesheet" href="styles.css" >
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-<link rel="stylesheet" href="themes/New.min.css" />
-<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<script src="layout.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Your custom theme -->
+  <link rel="stylesheet" href="themes/New.min.css">
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- jQuery FIRST -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- Mobileinit: must come BEFORE jQuery Mobile -->
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
@@ -37,26 +50,27 @@
 <div class="grid-wrapper">
 <!-- Row 1 -->
 <div class="ui-grid-b custom-diy-grid">
-  <div class="ui-block-a"><img src="images/1902.png" img id="1902" alt="House"></div>
+  <div class="ui-block-a"><img src="images/1902.png" id="1902" alt="House"></div>
   <div class="ui-block-b"><p>If you want a never-ending list of projects, buy a 1893 farmhouse!</p></div>
-  <div class="ui-block-c"><img src="images/xav.png" img id="xavImg" alt="Stuck son"></div>
+  <div class="ui-block-c"><img src="images/xav.png" id="xavImg" alt="Stuck son"></div>
 </div>
 
 <!-- Row 2 -->
 <div class="ui-grid-b custom-diy-grid">
   <div class="ui-block-a"><p>Known as the "Miner Hotel"</p></div>
   <div class="ui-block-b"><p>PS: Do not ask your son to help with tiny space renovations, he will get stuck!</p></div>
-  <div class="ui-block-c"><img src="images/before.JPG" img id="beforeImg" alt="Door"></div>
+  <div class="ui-block-c"><img src="images/before.JPG" id="beforeImg" alt="Door"></div>
 </div>
 
 <!-- Row 3 -->
 <div class="ui-grid-b custom-diy-grid">
   <div class="ui-block-a"><p>Built in 1893</p></div>
-  <div class="ui-block-b"><img src="images/afterhall.JPG" img id="afterImg" alt="Narrow hallway"></div>
+  <div class="ui-block-b"><img src="images/afterhall.JPG" id="afterImg" alt="Narrow hallway"></div>
   <div class="ui-block-c"><p>Home sweet home</p></div>
 </div>
 </div>
-  <footer class="site-footer" style="text-align:center; padding:20px;"></footer>
+    <footer class="site-footer" style="text-align:center; padding:20px;">
+  <p>&copy; 2025 Wrangling the Robertson's Reviews | All rights reserved.</p></footer>
 
 <button id="openContactBtn" class="ui-btn ui-btn-a ui-btn-inline ui-mini">Contact Us</button>
 
@@ -89,10 +103,7 @@
   <button type="submit">Send</button>
 </form>
 
-<div id="formSuccess" style="display:none; color: green; margin-top: 10px;">
-  Thank you! Your message has been received.
 </div>
-</div>
- 
+ <script src="layout.js"></script>
 </body>
 </html>

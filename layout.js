@@ -1,7 +1,14 @@
 $(document).ready(function () {
-  
+// Open image in new tab when clicked on
+
+	$("ul li").on("click", function () {
+	      const imgPath = $(this).data("img");
+	      if (imgPath) {
+	        window.open(imgPath, "_blank");
+	      }
+	    });
   // Navbar & contact panel
-  
+
   $(".main-nav").html(`
     <ul>
       <li><a href="#" data-icon="back" onclick="history.back()">Back</a></li>
@@ -30,10 +37,8 @@ $(document).ready(function () {
 	    };
 	  }
 
-
-
   // Footer
-  
+
   $(".site-footer").html(`
     <p>&copy; <span id="year"></span> Wrangling the Robertson's Reviews. All rights reserved.</p>
     <div class="social-icons">
@@ -206,7 +211,7 @@ $(document).ready(function () {
   // -Onclick
   
   $("#bookLink").click(function () {
-      window.open("https://sotd.us/jenniferrobertson2/M6P/public/recipes.html", "_blank");
+      window.open("recipes.html", "_blank");
     });
   $("#gloryLink").click(() => window.open("https://www.facebook.com/glorydaysbarbershop", "_blank"));
   $("#universalLink").click(() => window.open("https://www.universalorlando.com/web/en/us", "_blank"));
