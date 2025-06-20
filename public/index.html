@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="layout.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Wrangling the Robertson's Reviews</title>
+   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="themes/New.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="layout.js"></script>
+<script src="contact.js"></script>
+</head>
+
+
+<body>
+
+
+
+ <header class="top-bar">
+  <img src="images/goat.gif" alt="Animated Logo" class="logo" >
+  <h1 class="site-title">Wrangling the Robertson's Reviews</h1>
+  <h2 class="page-heading">HOME</h2>
+</header>  
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="local.html">Local</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="DIY.html">DIY</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="about.html">About</a></li>
+     <li><a href="input.html">User Additions</a></li>
+  </ul>
+</nav>
+
+  <main class="content-grid">
+    <aside class="left-column">
+     <a href="https://www.cedarpoint.com" target="_blank">
+  <img src="images/CP.png" alt="Click to visit Cedar Point website" width="300">
+</a> 
+      <div class="side-content">
+        <h3>Coming soon!</h3>
+        <p>Cedar Point in Sandusky Ohio</p>
+      </div>
+    </aside>
+
+    <section class="main-column">
+      <h2>With reviews, what matters? Honesty!</h2>
+      <p>Honesty is what we do here. Yes, they are only opinions, but they can help you better make choices on which plumber to use, which restaurant to try this weekend 
+      and even which movie to choose for movie night. Not only do we share our experiences and recommendations with you, we also share our best recipes, because we all know going
+      out to eat is expensive and fantastic recipes are hard to come by. We will also share personal experiences on trips. All with honesty and transparency giving you the good the bad and the ugly so you 
+      can make the best decision possible.</p>
+    </section>
+
+    <aside class="right-column">
+    <img id="bookLink" src="images/Book.png" alt="Click to visit recipes" style="cursor: pointer;">
+<img id="gloryLink" src="images/GD.png" alt="Click to visit Glory Days" style="cursor: pointer;">
+<img id="universalLink" src="images/US.png" alt="Click to visit Universal" style="cursor: pointer;">
+
+    </aside>
+    <footer class="site-footer" style="text-align:center; padding:20px;"></footer>
+  </main>
+ 
+<button id="openContactBtn" class="ui-btn ui-btn-a ui-btn-inline ui-mini">Contact Us</button>
+
+<div id="contactPanel" class="contactPanel">
+  <button id="closePanelBtn">X</button>
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="purpose">What would you like to do?</label><br>
+  <select id="purpose" name="purpose" required>
+    <option value="">-- Please select --</option>
+    <option value="contact">Contact Us</option>
+    <option value="recommend">Recommend a Review</option>
+    <option value="addtolist">Add to One of Our Lists</option>
+  </select><br>
+
+  <label for="message">Your Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br>
+
+  <label>Subscribe to our newsletter?</label><br>
+  <label><input type="radio" name="subscribe" value="yes" required> Yes</label>
+  <label><input type="radio" name="subscribe" value="no"> No</label><br>
+
+  <button type="submit">Send</button>
+</form>
+</div>
+ 
+</body>
+</html>

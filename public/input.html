@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Favorites Input</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to style.css -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome (for social icons if needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- jQuery + jQuery Mobile -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+ <header class="top-bar">
+  <img src="images/goat.gif" alt="Animated Logo" class="logo" >
+  <h1 class="site-title">Wrangling the Robertson's Reviews</h1>
+  <h2 class="page-heading">HOME</h2>
+</header>  
+  <!-- Navbar (loaded via layout.js) -->
+  <nav class="main-nav"></nav>
+
+  <div class="ui-content" role="main">
+    <h2>Add to Favorites</h2>
+
+    <label for="listSelect">Choose a List:</label>
+    <select id="listSelect">
+      <option value="Travel">Travel</option>
+      <option value="Recipes">Recipes</option>
+      <option value="DIY">DIY</option>
+      <option value="Local">Local</option>
+    </select>
+
+    <label for="favoriteInput">Favorite Item:</label>
+    <input type="text" id="favoriteInput" placeholder="e.g. Grand Canyon">
+
+    <label for="ratingSelect">Rating (stars):</label>
+    <select id="ratingSelect">
+      <option value="0.5">0.5</option>
+      <option value="1">1.0</option>
+      <option value="1.5">1.5</option>
+      <option value="2">2.0</option>
+      <option value="2.5">2.5</option>
+      <option value="3">3.0</option>
+      <option value="3.5">3.5</option>
+      <option value="4">4.0</option>
+      <option value="4.5">4.5</option>
+      <option value="5">5.0</option>
+    </select>
+
+    <button id="addFavoriteBtn" class="ui-btn ui-btn-b">Add Item</button>
+
+    <h3>Items in <span id="currentListName">Travel</span>:</h3>
+    <ul id="favoritesList" data-role="listview" data-inset="true"></ul>
+
+    <hr>
+
+    <h3>Suggest a New List</h3>
+    <input type="text" id="newListSuggestion" placeholder="e.g. Books, Pets">
+    <button id="submitSuggestionBtn" class="ui-btn ui-btn-a">Submit Suggestion</button>
+
+    <h4>Suggestions from Users:</h4>
+    <ul id="suggestionsList" data-role="listview" data-inset="true"></ul>
+  </div>
+
+  <!-- Footer (loaded via layout.js) -->
+  <footer class="site-footer"></footer>
+
+  <!-- Link to layout.js -->
+  <script src="layout.js"></script>
+</body>
+</html>

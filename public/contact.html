@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide-Out Contact Us Panel</title>
+  <style>
+    /* The panel (hidden by default) */
+    #contactPanel {
+      position: fixed;
+      right: -300px; /* Hidden off-screen */
+      top: 0;
+      width: 300px;
+      height: 100%;
+      background: #fff;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+      transition: right 0.3s;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    /* Show panel */
+    #contactPanel.open {
+      right: 0;
+    }
+
+    /* The open button */
+    #openContactBtn {
+      position: fixed;
+      right: 0;
+      top: 40%;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 15px 20px;
+      cursor: pointer;
+      z-index: 1001;
+      border-radius: 5px 0 0 5px;
+    }
+
+    /* The close button inside the panel */
+    #closePanelBtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="openContactBtn">Contact Us</button>
+  <div id="contactPanel">
+    <button id="closePanelBtn">&times;</button>
+  
+      
+   <h3>Contact Us</h3>
+  <form id="contactForm">
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="purpose">What would you like to do?</label><br>
+  <select id="purpose" name="purpose" required>
+    <option value="">-- Please select --</option>
+    <option value="contact">Contact Us</option>
+    <option value="recommend">Recommend a Review</option>
+    <option value="addtolist">Add to One of Our Lists</option>
+  </select><br>
+
+  <label for="message">Your Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br>
+
+  <label>Subscribe to our newsletter?</label><br>
+  <label><input type="radio" name="subscribe" value="yes" required> Yes</label>
+  <label><input type="radio" name="subscribe" value="no"> No</label><br>
+
+  <button type="submit">Send</button>
+</form>
+
+<div id="formSuccess" style="display:none; color: green; margin-top: 10px;">
+  Thank you! Your message has been received.
+</div>
+
+      <label>Name:<br><input type="text" name="name" required></label><br><br>
+      <label>Email:<br><input type="email" name="email" required></label><br><br>
+      <label>Message:<br><textarea name="message" required></textarea></label><br><br>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <script>
+    const panel = document.getElementById('contactPanel');
+    const openBtn = document.getElementById('openContactBtn');
+    const closeBtn = document.getElementById('closePanelBtn');
+
+    openBtn.onclick = () => panel.classList.add('open');
+    closeBtn.onclick = () => panel.classList.remove('open');
+  </script>
+</body>
+</html>

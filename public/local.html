@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Wrangling the Robertson's Reviews</title>
+  <link rel="stylesheet" href="styles.css" >
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="themes/New.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<script src="layout.js"></script>
+</head>
+<body>
+ <header class="top-bar">
+  <img src="images/goat.gif" alt="Animated Logo" class="logo" >
+  <h1 class="site-title">Wrangling the Robertson's Reviews</h1>
+  <h2 class="page-heading">LOCAL</h2>
+</header>
+
+   <nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="local.html">Local</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="DIY.html">DIY</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="about.html">About</a></li>
+     <li><a href="input.html">User Additions</a></li>
+  </ul>
+</nav>
+
+  <main class="content-grid">
+    <aside class="left-column">
+     <a href="https://www.galesburg.com/picture-gallery/business/2014/03/31/galesburg-barbershops/435856007/" target="_blank">
+  <img src="images/2014.png" alt="Click to view Register mail article" width="300">
+</a> 
+      <div class="side-content">
+        <h3>Glory Days Barber Shop</h3>
+        <p>Photo credit Galesburg Register Mail</p>
+      </div>
+    </aside>
+
+    <section class="main-column">
+      <h2>My son Xavier has been seeing Kyle Rohweder at Glory Days Barber Shop since they opened.</h2>
+      <p>Besides being a great barber, Kyle is a great human being. Unfortunately, the word has gotten out over the years and we can no longer rely on a same day appointment.
+      That's ok though, he is worth the wait!</p>
+    </section>
+
+    <aside class="right-column">
+    <img src="images/B4.jpg" alt="Click to view larger image"
+     style="cursor: pointer;" 
+     onclick="window.open('images/B4.jpg', '_blank')">
+     <img src="images/GD.png" alt="Click to visit Glory Days facebook page"
+      style="cursor: pointer;"
+      onclick="window.open('https://www.facebook.com/glorydaysbarbershop', '_blank')">
+      <img src="images/After.jpg" alt="Click to view larger image"
+      style="cursor: pointer;"
+      onclick="window.open('images/After.jpg', '_blank')">
+    </aside>
+    <footer class="site-footer" style="text-align:center; padding:20px; background:#eee;"></footer>
+  </main>
+
+<button id="openContactBtn" class="ui-btn ui-btn-a ui-btn-inline ui-mini">Contact Us</button>
+
+<div id="contactPanel" class="contactPanel">
+  <button id="closePanelBtn">&times;</button>
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="purpose">What would you like to do?</label><br>
+  <select id="purpose" name="purpose" required data-role="none">
+    <option value="">-- Please select --</option>
+    <option value="contact">Contact Us</option>
+    <option value="recommend">Recommend a Review</option>
+    <option value="addtolist">Add to One of Our Lists</option>
+  </select><br>
+
+  <label for="message">Your Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br>
+
+  <label>Subscribe to our newsletter?</label><br>
+  <label><input type="radio" name="subscribe" value="yes" required> Yes</label>
+  <label><input type="radio" name="subscribe" value="no"> No</label><br>
+
+  <button type="submit">Send</button>
+</form>
+</div>
+</body>
+</html>

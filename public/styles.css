@@ -1,0 +1,350 @@
+/* Reset and Box Model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Body Styling */
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #dec7dc;
+}
+
+/* Top Bar */
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  padding: 20px;
+  background-color: #800080;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.site-title {
+  text-align: center;
+  color: #000000;
+}
+
+.page-heading {
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* Navigation */
+.main-nav ul {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  list-style: none;
+}
+
+.main-nav ul li a {
+  color: #808080;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Grid Layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left Column */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-column img {
+  width: 100%;
+}
+
+/* Side Content Box */
+.side-content {
+  padding: 10px;
+  border: 1px solid #808080;
+}
+
+/* Main Column */
+.main-column {
+  padding: 20px;
+  border: 1px solid #808080;
+}
+
+/* Right Column */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-column img {
+  width: 100%;
+}/* Grid box styling (within jQuery Mobile layout) */
+.custom-diy-grid .ui-block-a,
+.custom-diy-grid .ui-block-b,
+.custom-diy-grid .ui-block-c {
+  padding: 15px;
+  text-align: center;
+  border: 2px solid #dec7dc;
+  background-color: #fff;
+  border-radius: 10px;
+
+  /* Center content vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Controlled height for better balance */
+  min-height: 250px;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+/* Image styling inside grid blocks */
+.custom-diy-grid img {
+  max-width: 100%;
+  max-height: 180px;
+  height: auto;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Text (caption) styling */
+.custom-diy-grid p {
+  font-size: 1em;
+  color: #000;
+  margin: 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.grid-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Make images responsive */
+.custom-diy-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Text styling inside blocks */
+.custom-diy-grid p {
+  font-size: 1em;
+  color: #000;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+  .ui-grid-b.custom-diy-grid .ui-block-a,
+  .ui-grid-b.custom-diy-grid .ui-block-b,
+  .ui-grid-b.custom-diy-grid .ui-block-c {
+    width: 100% !important;
+    float: none !important;
+  }
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+}
+
+.footer {
+  background-color: #800080;
+}
+
+.footer-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#facebookBtn, #instagramBtn, #youtubeBtn, #emailBtn {
+  background-color: #333;
+  color: #808080;
+}
+
+#facebookBtn:hover,
+#instagramBtn:hover,
+#youtubeBtn:hover,
+#emailBtn:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Social Icons */
+.social-icons {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #555;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #800080;
+}
+
+/* Thumbnails */
+.thumb {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+ul li:hover {
+  background-color: #f0f0f0;
+}
+
+/* jQuery Mobile Image Bar Fix */
+.ui-bar.ui-bar-a {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.ui-bar.ui-bar-a img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+#contactPanel {
+  position: fixed;
+  top: 0;
+  right: -350px; /* start off-screen */
+  width: 300px;
+  height: 100%;
+  background-color: #dec7dc;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+#contactPanel input[type="text"],
+#contactPanel input[type="email"],
+#contactPanel select,
+#contactPanel textarea {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #888;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#contactPanel select,
+#contactPanel .ui-select .ui-btn {
+  background-color: #ffffff !important;
+  color: #000000;
+  border: 1px solid #888 !important;
+}
+
+
+#contactPanel.open {
+  right: 0;
+}
+#openContactBtn {
+  position: fixed;
+  right: 5px;
+  top: 40%;
+  background: #400040;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 5px 0 0 5px;
+}
+#closePanelBtn {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  background: #800080;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  width: 15%;
+  cursor: pointer;
+  
+  z-index: 1001;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-bar {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .site-title,
+  .page-heading {
+    text-align: center;
+  }
+
+  .main-nav {
+    flex-direction: column;
+  }
+}

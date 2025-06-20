@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Wrangling the Robertson's Reviews</title>
+  <link rel="stylesheet" href="styles.css" >
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="themes/New.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<script src="layout.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+
+</head>
+<body>
+
+ <header class="top-bar">
+  <img src="images/goat.gif" alt="Animated Logo" class="logo" >
+  <h1 class="site-title">Wrangling the Robertson's Reviews</h1>
+  <h2 class="page-heading">RECIPES</h2>
+</header>
+
+   <nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="local.html">Local</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="DIY.html">DIY</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="about.html">About</a></li>
+     <li><a href="input.html">User Additions</a></li>
+  </ul>
+</nav>
+
+  <main class="content-grid">
+    <aside class="left-column">
+             <div class="side-content">
+        <h3>Coming soon!</h3>
+        <p>Chicken Salad Recipe</p>
+      </div>
+    </aside>
+
+    <section class="main-column">
+      <h2>Recipes</h2>
+      <input type="text" id="filterInput" placeholder="Search for a recipe..." style="width:100%; padding:10px; margin-bottom:15px;">
+      
+        <ul>
+        <li data-img="images/Alfredo.png">
+  <img src="images/Alfredo.png" class="thumb" alt="alfredo"> Amazaing Alfredo
+</li>
+   <li data-img="images/Applepie.png">
+  <img src="images/Applepie.png" class="thumb" alt="apple pie"> Apple Pie
+</li>
+   <li data-img="images/Bakedbeans.png">
+  <img src="images/Bakedbeans.png" class="thumb" alt="baked beans"> Baked Beans
+</li>
+ <li data-img="images/Buckeyebars.png">
+  <img src="images/Buckeyebars.png" class="thumb" alt="buckeye bars"> Buckeye Bars
+</li>
+ <li data-img="images/CCCdip.png">
+  <img src="images/CCCdip.png" class="thumb" alt="choc chip cheesecake dip"> Chocolate Chip Cheesecake Dip
+</li>
+ <li data-img="images/Chickenandnoodles.png">
+  <img src="images/Chickenandnoodles.png" class="thumb" alt="chicken and noodles"> Chicken and Noodles
+</li>
+ <li data-img="images/Chickenspaghetti.png">
+  <img src="images/Chickenspaghetti.png" class="thumb" alt="chicken spaghetti"> Chicken Spaghetti
+</li>
+ <li data-img="images/Chili.png">
+  <img src="images/Chili.png" class="thumb" alt="chili"> Chili
+</li>
+ <li data-img="images/Chilicheesedip.png">
+  <img src="images/Chilicheesedip.png" class="thumb" alt="chili cheese dip"> Chili Cheese Dip
+</li>
+ <li data-img="images/Crackonastick.png">
+  <img src="images/Crackonastick.png" class="thumb" alt="crack on a stick"> Crack on a Stick
+</li>
+ <li data-img="images/Deviledeggs.png">
+  <img src="images/Deviledeggs.png" class="thumb" alt="deviled eggs"> Deviled Eggs
+</li>
+ <li data-img="images/Eggrolls.png">
+  <img src="images/Eggrolls.png" class="thumb" alt="eggrolls"> Egg Rolls
+</li>
+ <li data-img="images/Enchiladas.png">
+  <img src="images/Enchiladas.png" class="thumb" alt="enchiladas"> Enchiladas
+</li>
+ <li data-img="images/Garlicbiscuits.png">
+  <img src="images/Garlicbiscuits.png" class="thumb" alt="garlic biscuits"> Garlic biscuits
+</li>
+ <li data-img="images/Garlicchicken.png">
+  <img src="images/Garlicchicken.png" class="thumb" alt="garlic chicken"> Garlic Chicken
+</li>
+ <li data-img="images/Goulash.png">
+  <img src="images/Goulash.png" class="thumb" alt="goulash"> Goulash
+</li>
+ <li data-img="images/Greenbeancasserole.png">
+  <img src="images/Greenbeancasserole.png" class="thumb" alt="green bean casserole"> Green Bean Casserole
+</li>
+ <li data-img="images/Heavenlychicken.png">
+  <img src="images/Heavenlychicken.png" class="thumb" alt="heavenly chicken"> Heavenly Chicken
+</li>
+ <li data-img="images/Lasagna.png">
+  <img src="images/Lasagna.png" class="thumb" alt="lasagna"> Lasagna
+</li>
+ <li data-img="images/Loosemeat.png">
+  <img src="images/Loosemeat.png" class="thumb" alt="loose meat sandwhiches"> Loose Meat Sandwiches
+</li>
+ <li data-img="images/Meatloaf.png">
+  <img src="images/Meatloaf.png" class="thumb" alt="meatloaf"> Meatloaf
+  
+</li>
+<li data-img="images/MMfrosting.png">
+  <img src="images/MMfrosting.png" class="thumb" alt="marry me frosting"> Marry Me Frosting
+</li>
+<li data-img="images/Nobakecookies.png">
+  <img src="images/Nobakecookies.png" class="thumb" alt="no bake cookies"> No Bake Cookies
+</li>
+<li data-img="images/PBcookies.png">
+  <img src="images/PBcookies.png" class="thumb" alt="pb cookies"> Peanut Butter Cookies
+</li>
+<li data-img="images/Pecanpie.png">
+  <img src="images/Pecanpie.png" class="thumb" alt="pecan pie"> Pecan Pie
+</li>
+<li data-img="images/Pizzaburgers.png">
+  <img src="images/Pizzaburgers.png" class="thumb" alt="pizza burgers"> Pizza Burgers
+</li>
+<li data-img="images/Pumpkinbread.png">
+  <img src="images/Pumpkinbread.png" class="thumb" alt="pumpkin bread"> Pumpkin Bread
+</li>
+<li data-img="images/Pumpkinpie.png">
+  <img src="images/Pumpkinpie.png" class="thumb" alt="pumpkin bread"> Pumpkin Pie
+</li>
+<li data-img="images/Scotcheroos.png">
+  <img src="images/Scotcheroos.png" class="thumb" alt="scotcheroos"> Scotcheroos
+</li>
+<li data-img="images/Spoonablecornbread.png">
+  <img src="images/Spoonablecornbread.png" class="thumb" alt="spoonable cornbread"> Spoonable Cornbread
+</li>
+<li data-img="images/Steaksandwiches.png">
+  <img src="images/Steaksandwiches.png" class="thumb" alt="steak sandwiches"> Steak Sandwiches
+</li>
+<li data-img="images/Sweetpotatoes.png">
+  <img src="images/Sweetpotatoes.png" class="thumb" alt="sweet potatoes"> Sweet Potatoes
+</li>
+<li data-img="images/Tacopizza.png">
+  <img src="images/Tacopizza.png" class="thumb" alt="taco pizza"> Taco Pizza
+</li>
+<li data-img="images/Texasstew.png">
+  <img src="images/Texasstew.png" class="thumb" alt="texas stew"> Texas Stew
+</li>
+<li data-img="images/Wontontacos.png">
+  <img src="images/Wontontacos.png" class="thumb" alt="wonton tacos"> Wonton Tacos
+</li>
+    </ul> </section>
+
+    <aside class="right-column">
+    <img id="meatloafImg" src="images/Meatloaf.png" alt="Click for larger view" style="cursor: pointer;">
+  <img id="garlicChickenImg" src="images/Garlicchicken.png" alt="Click for larger view" style="cursor: pointer;">
+  <img id="pizzaBurgersImg" src="images/Pizzaburgers.png" alt="Click for larger view" style="cursor: pointer;">
+    </aside>
+    <footer class="site-footer" style="text-align:center; padding:20px; background:#eee;"></footer>
+  </main>
+
+<button id="openContactBtn" class="ui-btn ui-btn-a ui-btn-inline ui-mini">Contact Us</button>
+
+<div id="contactPanel" class="contactPanel">
+  <button id="closePanelBtn">&times;</button>
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="purpose">What would you like to do?</label><br>
+  <select id="purpose" name="purpose" required data-role="none">
+    <option value="">-- Please select --</option>
+    <option value="contact">Contact Us</option>
+    <option value="recommend">Recommend a Review</option>
+    <option value="addtolist">Add to One of Our Lists</option>
+  </select><br>
+
+  <label for="message">Your Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br>
+
+  <label>Subscribe to our newsletter?</label><br>
+  <label><input type="radio" name="subscribe" value="yes" required> Yes</label>
+  <label><input type="radio" name="subscribe" value="no"> No</label><br>
+
+  <button type="submit">Send</button>
+</form>
+</div>
+</body>
+</html>

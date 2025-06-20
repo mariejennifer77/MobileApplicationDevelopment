@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Wrangling the Robertson's Reviews</title>
+  <link rel="stylesheet" href="styles.css" >
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="layout.js"></script>
+<script src="contact.js"></script>
+</head>
+<body>
+
+
+ <header class="top-bar">
+  <img src="images/goat.gif" alt="Animated Logo" class="logo" >
+  <h1 class="site-title">Wrangling the Robertson's Reviews</h1>
+  <h2 class="page-heading">ABOUT</h2>
+</header>
+
+  <nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="local.html">Local</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="DIY.html">DIY</a></li>
+    <li><a href="travel.html">Travel</a></li>
+    <li><a href="about.html">About</a></li>
+     <li><a href="input.html">User Additions</a></li>
+  </ul>
+</nav>
+
+  <main class="content-grid">
+    <aside class="left-column">
+     <img id="baby" src="images/baby.png" alt="Click to view larger image" style="cursor: pointer;">
+      <div class="side-content">
+        <h3>Babies!</h3>
+        <p>The babies were always my favorite!</p>
+      </div>
+    </aside>
+
+    <section class="main-column">
+      <h2>Who are we? The Robertsons!</h2>
+      <p>We are just like everyone else. We are a small family trying to make it in this giant world. As we stumble through the life we have been given, we find certain 
+      things we enjoy. When we do, we love to share them! For example: we tried raising fainting goats, and although it was quite entertaining, it was anything but profitable.</p>
+  
+  
+   
+    </section>
+
+    <aside class="right-column">
+    <img id="breathImg" src="images/breath.png" alt="Goats have bad breath" style="cursor: pointer;">
+<img id="kingImg" src="images/king.png" alt="Goats will always try to find the highest spot, even if it's you!" style="cursor: pointer;">
+<img id="suvImg" src="images/suv.png" alt="When your mom lets you borrow her car....OOOPS" style="cursor: pointer;">
+
+    </aside>
+    <footer class="site-footer" style="text-align:center; padding:20px; background:#eee;"></footer>
+  </main>
+ 
+
+<button id="openContactBtn">Contact Us</button>
+
+<div id="contactPanel" class="contactPanel">
+  <button id="closePanelBtn">&times;</button>
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="purpose">What would you like to do?</label><br>
+  <select id="purpose" name="purpose" required>
+    <option value="">-- Please select --</option>
+    <option value="contact">Contact Us</option>
+    <option value="recommend">Recommend a Review</option>
+    <option value="addtolist">Add to One of Our Lists</option>
+  </select><br>
+
+  <label for="message">Your Message:</label><br>
+  <textarea id="message" name="message" rows="5" required></textarea><br>
+
+  <label>Subscribe to our newsletter?</label><br>
+  <label><input type="radio" name="subscribe" value="yes" required> Yes</label>
+  <label><input type="radio" name="subscribe" value="no"> No</label><br>
+
+  <button type="submit">Send</button>
+</form>
+
+ 
+ 
+</body>
+</html>
